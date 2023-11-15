@@ -11,29 +11,27 @@ class ImcResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imc_result)
-//        initComponent()
-//        initUI()
-//        initListeners()
+        initComponent()
+        initUI()
+        initListeners()
     }
 
-//    private fun initComponent() {
-//        recalcButton = findViewById(R.id.recalcButton)
-//    }
-//
-//    private fun initUI() {
-//
-//    }
-//
-//    private fun initListeners() {
-//        recalcButton.setOnClickListener{
-//            navigateRecalc()
-//        }
-//    }
-//
-//    private fun navigateRecalc() {
-//        val intent = Intent (this, ImcCalculatorActivity::class.java)
-//        startActivity(intent)
-//    }
-//
-//
+    private fun initComponent() {
+        recalcButton = findViewById(R.id.recalcButton)
+    }
+
+    private fun initUI() {
+
+    }
+
+    private fun initListeners() {
+        recalcButton.setOnClickListener{
+            navigateRecalc()
+        }
+    }
+
+    private fun navigateRecalc() {
+        val intent = Intent (this, ImcCalculatorActivity::class.java)
+        startActivity(intent)
+    }
 }

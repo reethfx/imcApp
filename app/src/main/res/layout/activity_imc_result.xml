@@ -9,8 +9,24 @@
     android:paddingVertical="32dp"
     android:background="@color/bg_app">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/recalcButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/bg_button"
+        android:text="Re-Calcular"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:circularflow_radiusInDP="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953"
+        tools:layout_editor_absoluteX="16dp">
+    </androidx.appcompat.widget.AppCompatButton>
+
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
@@ -26,4 +42,57 @@
             android:textStyle="bold">
         </TextView>
     </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardResult"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        app:cardBackgroundColor="@color/bg_comp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/recalcButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/recalcButton"
+            app:layout_constraintTop_toBottomOf="@+id/tvResult"
+            app:layout_constraintVertical_bias="0.382"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sobrepeso"
+                android:layout_marginBottom="25dp"
+                android:textColor="#CE620F"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120cm"
+                android:textColor="@color/white"
+                android:textSize="78sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvExplaination"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Este es un texto de ejemplo bla bla bla"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
